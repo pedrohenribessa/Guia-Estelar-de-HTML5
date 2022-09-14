@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        <table>
+        Prós
+        - Visualização de dados via linhas e colunas.
+        - Boa acassibilidade para leitura dos dados
+
+        Contras
+        - Pouco flexivel
+        - Precisa de estilização para melhor vizualização
+        
+        Não usar
+        - Para criar seu layout
+    -->
+    <table>
+
+            <caption>Pessoas por idade</caption>
+
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pedro</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Matheus</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total:</td>
+                <td>2 pessoas</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <table>
+        <caption>Produzidos vs Vendidos por loja</caption>
+
+        <colgroup>
+            <col style="background-color:yellow">
+            <col span="2" style="background-color:red">
+            <col span="2" style="background-color:blue">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan="2" scope="colgroup">Pedro Bessa</th>
+                <th colspan="2" scope="colgroup">Matheus Modas</th>
+            </tr>
+            <tr>
+                <th scope="col">Produzidos</th>
+                <th scope="col">Vendidos</th>
+                <th scope="col">Produzidos</th>
+                <th scope="col">Vendidos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Camisas</th>
+                <td>25</td>
+                <td>23</td>
+                <td>30</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <th scope="row">Tenis</th>
+                <td>15</td>
+                <td>10</td>
+                <td>15</td>
+                <td>12</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
