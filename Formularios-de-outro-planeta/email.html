@@ -1,0 +1,51 @@
+<!--
+    <input type="email">
+    - Espera que o usuario digite o email
+    - Irá validar se o valor digitado é um email
+
+    Atributos
+    - placeholder
+    - readonly / disable
+    - value
+    - required
+    - multiple
+    - minlenght / maxlength
+        * O número mínimo e/ou máximo de caracteres para este campo- 
+    size
+        * valor numérico indicando quantos caracteres esse campo para o usuario
+    - pattern
+        * Uso de expressão regular para validar o campo
+        * exemplo: o usuário só poderá colocar email do domínio solicitado
+            . pattern=".+@gmail\.com\.br"
+    - list
+        * o id de uma tag <datalist> que está no mesmo documento
+        * <datalist> irá conter uma lista de valores pré definidos a fim de sugerir ao usuário, quais valores estão disponíveis
+            . os valores <datalist> que não forem compátiveis com o campo, nçao serão apresentados como sujestão
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="email"
+        placeholder="Email"
+        required
+        multiple
+        minlength="8"
+        maxlength="32"
+        size="20"
+        pattern=".+@gmail\.com\.br"
+        list="meu-email"
+        >
+        <datalist id="meu-email">
+            <option value="pedro@gmail.com.br">pedro@gmail.com.br</option>
+        </datalist>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

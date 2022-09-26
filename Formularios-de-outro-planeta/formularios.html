@@ -1,0 +1,144 @@
+<!--
+    Formularios
+    - capturar dados de entradada (imput)
+    - interação
+    - controle
+
+    Pré requisitos
+    - basico html
+
+    Dominar
+    - estilização
+    - validação
+    - controles customizados
+    - javascript
+-->
+
+<!--
+    <form>
+        - elemento que definirá um formulario
+        - é um conteiner estilo <section> <footer>
+
+    Atributos básicos
+    - action
+    - method
+        . get
+        . post
+-->
+
+<!--
+    <fildset>
+        - agrupamento de campos
+        - mesmo proposito
+        - semântio
+        - acessibilidade
+    
+    Atributos especiais
+    - disable
+        . desabilita todos os elementos internos
+        . não serão enviados ao submeter o formulário
+    - name
+        . nome do grupo
+    <legend>
+        . nome do agrupamento
+        . primeiro elento dentro do fieldset
+
+    <label>
+        - associar e identificar uma (ou mais) tag de entrada de dados
+        - acessibilidade
+        - voce podera clicar para mudar o foco da entrada de dados
+      atributos
+      - for
+        . para fazer uma conexão entre este label e a tag de entrada de dados
+        . é feita via id do imput
+        . só funciona com elemento específicos
+            * button, input (not hidden), meter, output, progress, select, textarea
+
+    <button>
+        - representa um botão
+        - usado para enviar formulários
+        - é estilizado pelo user agent
+    Atributos comuns
+    - type
+        . submit
+        . reset
+        . button
+    - autofocus
+    - disable
+    - name
+    - value
+    - form
+
+    <datalist>
+            - lista de valores como sujestão a uma tag <imput>
+            - valores sujestivose não obrigatórios
+            - usuarios poderão selecionar um dos valores, ou colocar um valor diferente da sujestão
+            <datalist id="fruitsdata">
+            <option>aple</option>
+            <option>banana</option>
+            <option>mango</option>
+            <option>orange</option>
+            <option>cherry</option>
+            </datalist>
+        * list
+            - recebe o valor como o id de um <data list> residente  no mesmo decumento
+        * tipos de input suportados
+            - text, search, url, tel, email, date, month, week, time, datetime-local, number, range e color.
+        * valores de datalist que não são compativeis com o tipo de <input> não serão representados.
+
+        * tipos de input não suportados(conforme especificação)
+            - hidden, password, checkbox, radio, file, ou qualquer tipo de button.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="contato">
+        <fieldset form="contato" name="imputs-contact">
+            <legend>Contato</legend>
+
+            <div>
+                <label for="name">
+                    Nome:
+                </label>
+                <input id="name" type="text">
+            </div>
+
+            <div>
+                <label for="lastName">
+                    Sobre Nome:
+                </label>
+                <input id="lastName" type="text">
+            </div>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <input 
+        type="text" 
+        list="fruitsdata"
+        placeholder="Escolha uma fruta" />
+        
+    <datalist id="fruitsdata">
+        <option value="aple">aple</option>
+        <option value="banana">banana</option>
+        <option value="mango">mango</option>
+        <option value="orange">orange</option>
+        <option value="cherry">cherry</option>
+    </datalist>
+
+    <datalist id="colorsfruits">
+        <option value="#ff0000"></option>
+        <option value="#00ff00"></option>
+        <option value="#0000ff"></option>
+    </datalist>
+    <input type="color" list="colorsfruits">
+</body>
+</html>
