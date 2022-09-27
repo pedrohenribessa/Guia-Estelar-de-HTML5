@@ -1,0 +1,36 @@
+<!--
+    <input type="search">
+    - Para campos de busca
+    - É igual ao campo do tipo 'text' mas poderá ser um pouco diferente dependendo do user agent
+
+    * Atributos
+    - list / <datalis>
+    - pattern
+    - arial-label
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <datalist id="searchterms">
+        <option>Mac</option>
+        <option>Wind</option>
+        <option>Linux</option>
+    </datalist>
+    <form>
+        <button type="submit">Pesquisar</button>
+        <input type="search" name="q" list="searchterms"
+        placeholder="Digite seu termo de busca."
+        size="25"
+        aria-label="Campo de pesquisa: Digite seu termo de busca."]
+        pattern="[0-9]{4}"
+        >
+    </form>
+    
+</body>
+</html>

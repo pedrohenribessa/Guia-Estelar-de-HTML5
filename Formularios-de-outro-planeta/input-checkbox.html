@@ -1,0 +1,39 @@
+<!--
+    <input type="checkbox"
+    - Caixas que podem ser marcadas
+    - Selecionar um valor para ser enviado
+    - Se não selecionado, não será enviado nenhum dado
+
+    # Atributos
+    - globais
+    - value
+        . valor que aquele campo contém
+        . se não estiver presente, o padrão é 'on'
+    - checked
+        . para deixar o campo marcado por padrão
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Qual o seu interesse?</legend>
+                <div>
+                    <label for="Rock">Rock</label>
+                    <input type="checkbox" name="Rock" id="Rock"checked >
+                </div>
+                <div>
+                    <label for="Funk">Funk</label>
+                    <input type="checkbox" name="Funk" id="Funk"checked >
+                </div>
+        </fieldset>
+        <button type="submit">Eviar</button>
+    </form>
+</body>
+</html>
