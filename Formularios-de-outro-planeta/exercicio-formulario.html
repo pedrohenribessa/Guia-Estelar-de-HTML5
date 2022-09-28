@@ -17,7 +17,7 @@
     <title>Exercício Formulário</title>
 </head>
 <body>
-    <form>
+    <form method="get">
         <fieldset>
             <legend>Contato</legend>
             <div>
@@ -33,9 +33,9 @@
             <div>
                 <label for="texto">Menssagem</label>
                 <br>
-                <textarea name="menssagem" cols="30" rows="10"></textarea>
+                <textarea name="menssagem" cols="30" rows="10" required id="texto" minlength="10" maxlength="100"></textarea>
             </div>
-            <button>Enviar</button>
+            <button type="submit" autofocus>Enviar</button>
         </fieldset>
     </form>
 </body>
